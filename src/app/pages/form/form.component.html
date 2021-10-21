@@ -1,0 +1,25 @@
+<h3>Selamat datang {{currentUser}}</h3>
+
+<table>
+  <tr>
+    <td>Username</td>
+    <td><input type="text" [(ngModel)]="username"></td>
+  </tr>
+  <tr>
+    <td>Password</td>
+    <td><input type="password" [(ngModel)]="password"></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td *ngIf="!dataStorage">
+      <button (click)="doLogin()">Login</button>
+    </td>
+  </tr>
+  <tr>
+    <td *ngIf="dataStorage">
+      <button (click)="doLogout()">Logout</button>
+    </td>
+  </tr>
+</table>

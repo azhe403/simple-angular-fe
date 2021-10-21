@@ -1,0 +1,11 @@
+<p>Array Manipulation</p>
+
+<button (click)="resetArray()">Reset array</button>
+<hr>
+
+<div>
+  <div *ngFor="let row of dataRows">
+    <input type="text" value="{{row.name}}">
+    <button (click)="valueChange(row.userId)">change value</button>
+  </div>
+</div>
